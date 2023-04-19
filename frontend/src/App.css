@@ -1,0 +1,97 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
+/* @import url('./fonts/montserrat.css');
+@import url('./fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+@import url('./fonts/montserrat/Montserrat-VariableFont_wght.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Black.ttf');
+@import url('./fonts/montserrat/static/Montserrat-BlackItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Bold.ttf');
+@import url('./fonts/montserrat/static/Montserrat-BoldItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-ExtraBold.ttf');
+@import url('./fonts/montserrat/static/Montserrat-ExtraBoldItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-ExtraLight.ttf');
+@import url('./fonts/montserrat/static/Montserrat-ExtraLightItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Italic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Light.ttf');
+@import url('./fonts/montserrat/static/Montserrat-LightItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Medium.ttf');
+@import url('./fonts/montserrat/static/Montserrat-MediumItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Regular.ttf');
+@import url('./fonts/montserrat/static/Montserrat-SemiBold.ttf');
+@import url('./fonts/montserrat/static/Montserrat-SemiBoldItalic.ttf');
+@import url('./fonts/montserrat/static/Montserrat-Thin.ttf');
+@import url('./fonts/montserrat/static/Montserrat-ThinItalic.ttf'); */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+:root {
+  --text-color: #ffffff;
+  --main-color: #17191C;
+
+  --nav-bar-color: #0D0F11;
+
+  --bar-color: #141719;
+  --bar-border-color: #414141;
+  --secondary-color: rgba(255, 255, 255, 0.11);
+  --secondary-color-lighter: rgba(255, 255, 255, 0.379);
+  --secondary-color-darker: rgba(255, 255, 255, 0.027);
+  
+  --dropdown-icon-808080: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtklEQVR4nO3RLwvCQBiA8SsiCjIQURAMgsFg8wM+LzsGt7BwcZ/DosFisRgMBoNgEAQ/hXJhojDcPNfcA285uB/3R6m6P8kYE4RhOP9ljDHBE0zTtCEiCxG5e87KWtt8O6VbAJYe2DpJklbu1YE2sPkC28Zx3Cl8T2BXhAF7oFvqk4AecPiAHaMoGpTCsoC+25iDnYCh8klrPRKR8wt40VqPvbAsYAJcReQGTFUVATM3lWB1qqgHk/rtJdC5vgMAAAAASUVORK5CYII=')
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  background: #0D0F11;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

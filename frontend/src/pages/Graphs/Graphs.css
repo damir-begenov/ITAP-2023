@@ -1,0 +1,140 @@
+.mainSection {
+    position: relative;
+  
+    /* flex: 1; */
+  
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+  
+    gap: 20px; */
+  
+    width: 100%;
+    height: 90vh;
+  }
+  
+  
+  
+  .centralBar {
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+  
+    width: 60%;
+  
+    box-shadow: 0px 4px 38px -38px rgba(255, 255, 255, 0.7) inset;
+  }
+  
+  .centralBar .nodeSearch {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+  }
+
+  .nodeSearch div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nodeSearch i {
+    cursor: pointer;
+  
+    font-size: 17px;
+  
+    color: rgb(139, 139, 139);
+  }
+
+  .nodeSearch input {
+    outline: none;
+    min-width: 300px;
+    box-sizing: content-box;
+  
+    border-radius: 4px;
+    background-color: #2f3337;
+    color: rgb(139, 139, 139);
+  
+    border: none;
+  
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 3px 0 3px 10px;
+  }
+  
+  .nodeSearch input:focus {
+    outline: none;
+  }
+  
+  .nodeSearch > div:nth-child(1) {
+    position: relative;
+  }
+
+  .nodeSearch > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+
+  .nodeSearch > div:nth-child(2) > img {
+    cursor: pointer;
+    width: 30%;
+
+  }
+
+  .nodeSearch > div:nth-child(1) > i {
+    position: absolute;
+    right: 10px;
+  }
+
+
+
+  /* .nodeSearch > div:nth-child(2) {
+    background: #000;
+  } */
+  
+  /* Node Title Block styles */
+  .centralBar div:nth-child(2) {
+    /* z-index: -1; чтобы был эффект тиснения от навбара */
+    box-sizing: border-box;
+  
+    /* background-color: var(--bar-color); */
+    background-color: #0D0F11;
+  
+    text-align: start;
+  }
+
+  .nodeContextMenu {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+  
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    z-index: 1;
+
+    padding: 5px;
+  }
+
+  .nodeContextMenu input {
+    background-color: yellow;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 5px;
+  }

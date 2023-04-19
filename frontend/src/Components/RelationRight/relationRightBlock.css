@@ -1,0 +1,59 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.showRelsBlockRight {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+}
+
+/* buttons */
+.showRelsBlockRight > div:nth-child(1) { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    width: 100%;
+    padding: 0 5px 0 0;
+    box-sizing: border-box;
+}
+
+.showRelsBlockRight > div > input {
+    width: max-content;
+    border-radius: 4px;
+    line-height: 2em;
+
+    cursor: pointer;
+
+    background: var(--secondary-color);
+    color: #ffffffac;
+}
+
+.showRelsBlockRight > div > input:hover {
+    background: var(--secondary-color-lighter);
+}
+.showRelsBlockRight > div > input:active {
+    background: var(--secondary-color-darker);
+}
+
+.showRelsBlockRightTitle {
+    margin: 0;
+}
+
+.checkboxes {
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.relsCheckers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

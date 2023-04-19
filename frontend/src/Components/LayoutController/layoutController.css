@@ -1,0 +1,102 @@
+.layoutControllerBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    border: gray 2px solid;
+
+    padding: 10px;
+
+    width: 95%;
+}
+
+.layoutControllerTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    cursor: pointer;
+    color: #808080;
+} 
+
+.layoutControllerTitle {
+    /* border: red 1px solid; */
+    background-image: var(--dropdown-icon-808080);
+    background-repeat: no-repeat;
+    background-position: right+2px center;
+} 
+
+.layoutControllerBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.layoutEnable {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.layoutOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 0 15px 0 5px;
+}
+
+.layoutOptions > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 100%;
+}
+
+.layoutOptions .layoutCheckboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.layoutOptions .layoutCheckboxes > div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.layoutOptions .layoutCheckboxes > div > label {
+    font-size: 14px !important;
+}
+
+.layoutOptions input:not([type="checkbox"]) {
+    height: 35px;
+    width: 100%;
+
+    padding-left: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+
+    border-radius: 4px;
+    border: none;
+
+    background-color: var(--secondary-color);
+}
+
+.layoutOptions select {
+
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC');
+    background-repeat: no-repeat;
+    background-position: right+5px center;
+}
+
+.layoutOptions label {
+    font-size: 12px !important;
+}

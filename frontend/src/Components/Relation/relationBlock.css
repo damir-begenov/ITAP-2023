@@ -1,0 +1,113 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.relsSelectBlock {
+} 
+
+.relsSelect {
+    /* padding: 5px; */
+}
+
+.relsSelect > .css-13cymwt-control, .relsSelect .css-t3ipsp-control {
+    background-color: rgba(255, 255, 255, 0.11);
+    border: none;
+    padding: 5px 0;
+
+}
+
+.relsSelect * {
+    outline: none;
+}
+
+.relsOption input[type="checkbox"] {
+    display: none;
+    appearance: none;
+}
+
+.relButton {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background: var(--secondary-color);
+    color: #808080;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.relButton:hover {
+    color: #0f0f0f;
+    background: var(--secondary-color-lighter);
+}
+
+.relButton:active {
+    color: #808080;
+    background: var(--secondary-color-darker);
+}
+
+/* 
+
+.relsSelect > div:nth-child(1), .relsSelect > div:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.11);
+    border: none;
+} */
+
+.css-3w2yfm-ValueContainer > div:not(:last-child) {
+    /* border: 4px red solid; */
+    color: #808080;
+    padding: 2px 0;
+}
+
+.relsSelect #react-select-2-listbox > * {
+    color: white
+}
+
+.showRelsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* buttons */
+.showRelsBlock > div:nth-child(1) { 
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    width: 300px;
+    padding: 0 5px 0 0;
+    box-sizing: content-box;
+}
+
+.checkboxes {
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.relsCheckers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.showRelsBlock > div > input {
+    width: max-content;
+    border-radius: 4px;
+    line-height: 2em;
+
+    cursor: pointer;
+
+    background: var(--secondary-color);
+    color: #ffffffac;
+}
+
+.showRelsBlock > div > input:hover {
+    background: var(--secondary-color-lighter);
+}
+.showRelsBlock > div > input:active {
+    background: var(--secondary-color-darker);
+}

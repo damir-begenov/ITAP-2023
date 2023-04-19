@@ -1,0 +1,59 @@
+table {
+  position: relative;
+  left: 52%;
+  transform: translate(-50%);
+  width: 100%;
+
+  border-collapse: separate;
+  border-spacing: 0 20px;
+
+  text-align: start;
+  /* margin-top: -40px; */
+}
+
+.table {
+  margin-top: 0;
+}
+
+table th {
+  font-size: 1.5em;
+  text-align: start;
+
+}
+
+table td {
+}
+
+.table tbody tr td {
+  text-align: start;
+}
+
+.table thead {
+
+}
+
+table .tdrow {
+  /* margin: 20px 0 0 0; */
+}
+
+.rowInfo {
+  text-decoration: none;
+  color: #ffffff;
+}
+.rowInfo:hover {
+  color: #606060;
+  transition: 0.3s ease;
+}
+.FIO {
+  /* display:flex; */
+  /* margin-left: 35%; */
+  /* transform: translate(-1%); */
+}
+
+.adminPanelTable tbody td:last-child {
+  text-align: end;
+}
+
+.adminPanelTable thead th:last-child {
+  text-align: end;
+}

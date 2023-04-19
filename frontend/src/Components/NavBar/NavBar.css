@@ -1,0 +1,80 @@
+.NavbarItems a {
+    text-decoration: none; 
+    color: rgba(255, 255, 255, 0.3);
+    transition: all ease 0.1s;
+}
+.admin {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+.NavbarItems > div > div > a:hover {
+    color: rgb(176, 176, 176);
+    transition: all ease 0.1s;
+}
+.nav-back {
+    box-shadow: 0px 4px 33px -6px rgba(255, 255, 255, 0.07);
+
+    background-color: var(--nav-bar-color);
+
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.logo {
+    font-family: 'Montserrat';
+    font-weight: 700;
+
+    margin-left: 100px;
+}
+
+.NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 0 30px;
+    width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    
+    gap: 3rem;
+    margin-right: 40px;
+
+    text-align: center;
+    
+    list-style: none;
+
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+    font-weight: 400;
+}
+
+.nav-links span {
+    font-weight: 700;
+}
+
+.nav-links .userRole {
+    font-weight: 400;
+    transition: all ease 0.1s;
+    color: rgba(116, 116, 116, 0.5)
+}
+
+.nav-links:hover {
+    color: rgb(176, 176, 176);
+    transition: all ease 0.1s;
+}
+.NavbarItems > div {
+    display: flex;
+    align-items: center;
+    
+    gap: 60px;
+}

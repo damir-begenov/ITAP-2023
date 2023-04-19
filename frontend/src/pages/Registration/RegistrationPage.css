@@ -1,0 +1,221 @@
+* {
+    outline: none;
+}
+
+section {
+    overflow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    max-width: 1000px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+section form > * {
+
+    overflow: none;
+    margin: 0;
+    padding: 0;
+}
+
+section .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    gap: 0;
+
+    margin-top: 50px;
+
+    cursor: default;
+} 
+
+section .title div {
+    line-height: 85%;
+
+}
+
+section .title div:nth-child(1) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 62px;
+
+    margin: 0;
+}
+
+section .title div:nth-child(2) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 43px;
+
+    color: #5E5E5E;
+
+    margin: 0;
+}
+
+section form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section form .inputs > div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+section form .inputs .firstLine,
+section form .inputs .secondLine {
+    gap: 30px;
+}
+
+section form .inputs > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+section form .inputs > div > div input {
+    width: 100%;
+    height: 30px;
+
+    padding-left: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+
+    border-radius: 4px;
+    border: none;
+
+    background-color: var(--secondary-color);
+}
+
+.inputs > div > div label {
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #808080;
+
+    margin-left: 7px;
+}
+
+.level {
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.level select {
+    width: 100%;
+}
+
+.level::after {
+    position: absolute;
+    right: 5px;
+
+    pointer-events: none;
+
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--main-color);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+select {
+    appearance: none;
+    outline: 0;
+
+    width: 100%;
+    height: 32.8px;
+
+    padding-left: 10px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: var(--secondary-color);
+}
+
+section form .actions {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: end;
+    align-items: center;
+}
+
+section form .actions input {
+    padding: 1px 11px;
+
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+
+    box-sizing: content-box;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+section form .actions #register {
+    background-color: #2D4231;
+    transition: .3s;
+}
+
+section form .actions #register:hover {
+    background-color: #3a553f;
+    transition: .3s;
+}
+
+section form .actions #register:active {
+    background-color: #223124;
+    transition: .3s;
+}
+
+section form .actions #clear {
+    background-color: #393939;
+    transition: .3s;
+}
+
+section form .actions #clear:hover {
+    background-color: #565656;
+    transition: .3s;
+}
+
+section form .actions #clear:active {
+    background-color: #2c2b2b;
+    transition: .3s;
+}
+
+section form .actions a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
