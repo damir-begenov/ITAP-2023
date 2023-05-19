@@ -12,14 +12,19 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
   Optional<User> findByUsername(String username);
-
+  User getById(Long id);
   Boolean existsByUsername(String username);
 
   Boolean existsByEmail(String email);
+  @Query(value = "select * FROM users where id > 10 limit 3", nativeQuery = true)
+
+  List<User> get3users();
 
   @Query(value = "select * FROM users where username like ?1 limit 1", nativeQuery = true)
   User findByUsernameTwo(String username);
 
+  @Query(value = "update users set password = ?1 where id = ?2", nativeQuery = true)
+  void changePassword(String password, Long id);
   @Query(value= "select * from users where username like '%' || ?1 || '%' or email like '%' || ?1 || '%'", nativeQuery = true)
   List<User> getUsersByLike(String value);
   @Modifying

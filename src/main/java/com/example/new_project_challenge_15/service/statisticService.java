@@ -29,29 +29,32 @@ public class statisticService {
     @Autowired
     com.example.new_project_challenge_15.repository.logRepo logRepo;
 
-    public void userBan(Long id){
-        User user = userRepository.findById(id).orElse(null);
-        if(user != null){
-            if(user.isActive()) {
-                user.setActive(false);
-            }else{
-                user.setActive(true);
-            }
-        }
-        userRepository.save(user);
-    }
-    public void userSetAdministrator(Long id){
-        User user = userRepository.findById(id).orElse(null);
-        Set<Role> roles = new HashSet<>();
-        Role userRole = roleRepository.findByName(ERole.VIP)
-                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
-        if(user.getRoles().contains("VIP")){
-            user.getRoles().remove("VIP");
-        }else{
-            roles.add(userRole);
-            user.setRoles(roles);
-        }
-        userRepository.save(user);
+//    public void userBan(Long id){
+//        User user = userRepository.findById(id);
+//        if(user != null){
+//            if(user.isActive()) {
+//                user.setActive(false);
+//            }else{
+//                user.setActive(true);
+//            }
+//        }
+//        userRepository.save(user);
+//    }
+//    public void userSetAdministrator(Long id){
+//        User user = userRepository.findById(id);
+//        Set<Role> roles = new HashSet<>();
+//        Role userRole = roleRepository.findByName(ERole.VIP)
+//                .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
+//        if(user.getRoles().contains("VIP")){
+//            user.getRoles().remove("VIP");
+//        }else{
+//            roles.add(userRole);
+//            user.setRoles(roles);
+//        }
+//        userRepository.save(user);
+//    }
+    public List<User> get3users(){
+        return userRepository.get3users();
     }
 
     public statisticModel getByUsername(String username) {

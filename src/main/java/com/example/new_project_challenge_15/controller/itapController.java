@@ -60,6 +60,10 @@ public class itapController {
     @Autowired
     user_RolesRepo userRolesRepo;
 
+    @GetMapping("/3users")
+    public List<User> get3users(){
+        return statisticService.get3users();
+    }
 
     @GetMapping("/logtest")
     public List<log> logTest(){

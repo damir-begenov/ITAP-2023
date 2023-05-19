@@ -23,13 +23,22 @@ public class User {
   @NotBlank
   @Size(max = 50)
   private String email;
-
+  @Lob
+  private String user_photo;
   @NotBlank
   @Size(max = 120)
   private String password;
   private boolean active;
   public boolean isActive() {
     return active;
+  }
+
+  public String getUser_photo() {
+    return user_photo;
+  }
+
+  public void setUser_photo(String user_photo) {
+    this.user_photo = user_photo;
   }
 
   public void setActive(boolean active) {

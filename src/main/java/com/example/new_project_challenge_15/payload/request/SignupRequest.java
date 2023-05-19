@@ -2,6 +2,7 @@ package com.example.new_project_challenge_15.payload.request;
 
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.persistence.Lob;
 import javax.validation.constraints.*;
 import java.util.Set;
 
@@ -18,8 +19,16 @@ public class SignupRequest {
   private String password;
   //  @NotBlank
   private String level;
+  @Lob
+  private String user_photo;
 
+  public String getUser_photo() {
+    return user_photo;
+  }
 
+  public void setUser_photo(String user_photo) {
+    this.user_photo = user_photo;
+  }
 
   public String getLevel() {
     return level;

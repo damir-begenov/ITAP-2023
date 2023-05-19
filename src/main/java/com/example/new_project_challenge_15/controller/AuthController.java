@@ -11,6 +11,7 @@ import com.example.new_project_challenge_15.repository.RoleRepository;
 import com.example.new_project_challenge_15.repository.UserRepository;
 import com.example.new_project_challenge_15.security.jwt.JwtUtils;
 import com.example.new_project_challenge_15.security.services.UserDetailsImpl;
+import com.example.new_project_challenge_15.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,13 +19,14 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.io.IOException;
+import java.security.Principal;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3000)
@@ -36,7 +38,9 @@ public class AuthController {
 
   @Autowired
   UserRepository userRepository;
+  @Autowired
 
+  UserDetailsServiceImpl userDetailsService;
   @Autowired
   RoleRepository roleRepository;
 
@@ -63,9 +67,18 @@ public class AuthController {
             userDetails.getEmail(),
             roles));
   }
-
+  @PutMapping("/changePassword")
+  public void changePassword(@RequestParam String password,Principal principal){
+//    System.out.println(userDetailsService.loadUserByUsernamek(principal));
+    User user = userDetailsService.loadUserByUsernamek(principal);
+    user.setPassword(encoder.encode(password));
+    System.out.println(user.getUsername());
+    System.out.println(user.getEmail());
+      userRepository.save(user);
+  }
   @PostMapping("/signup")
-  public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
+  public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest,@RequestParam("file") MultipartFile  file) {
+
     if (userRepository.existsByUsername(signUpRequest.getUsername())) {
       return ResponseEntity
               .badRequest()
@@ -131,6 +144,16 @@ public class AuthController {
               .orElseThrow(() -> new RuntimeException("Error: Role is not found."));
       roles.add(userRole);  }
     user.setActive(true);
+    String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+    if(fileName.contains(".."))
+    {
+      System.out.println("not a a valid file");
+    }
+    try {
+      user.setUser_photo(Base64.getEncoder().encodeToString(file.getBytes()));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     user.setRoles(roles);
     userRepository.save(user);
     return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
